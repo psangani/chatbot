@@ -1,0 +1,1954 @@
+{
+  "intents": [
+    {
+      "intent": "Get_Ans_To_Stress_Yes_No",
+      "examples": [
+        {
+          "text": "No"
+        },
+        {
+          "text": "Yes"
+        }
+      ],
+      "description": "Answer to are you stressed? Yes or No?"
+    },
+    {
+      "intent": "Get_User_Greetings",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Good Morning"
+        },
+        {
+          "text": "Good Evening"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "Good Afternoon"
+        }
+      ],
+      "description": "Get greetings from the user"
+    },
+    {
+      "intent": "Get_Location",
+      "examples": [
+        {
+          "text": "28262",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "text": "12345",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                0,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I am located at 28277",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                16,
+                21
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I live at 28277",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                10,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I reside at 28277",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                12,
+                17
+              ]
+            }
+          ]
+        },
+        {
+          "text": "This is my zip code 28277",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                20,
+                25
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I am at 28277",
+          "mentions": [
+            {
+              "entity": "location",
+              "location": [
+                8,
+                13
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "Get user location"
+    },
+    {
+      "intent": "Get_HowAreYouFeeling",
+      "examples": [
+        {
+          "text": "Cheerful"
+        },
+        {
+          "text": "Joy"
+        },
+        {
+          "text": "Happy"
+        },
+        {
+          "text": "Optimistic"
+        }
+      ],
+      "description": "Answer to how are you feeling"
+    },
+    {
+      "intent": "Get_Past_Days_Negativity_Count",
+      "examples": [
+        {
+          "text": "Many times"
+        },
+        {
+          "text": "A few times"
+        },
+        {
+          "text": "Not at all"
+        },
+        {
+          "text": "Once or twice"
+        }
+      ],
+      "description": "From past one month, how often have you felt down, depressed, or gotten little enjoyment from doing things?"
+    },
+    {
+      "intent": "Get_All_Set",
+      "examples": [
+        {
+          "text": "Thank you for your help"
+        },
+        {
+          "text": "I'm all set"
+        },
+        {
+          "text": "No, I'm good"
+        }
+      ],
+      "description": "All set and no further help needed"
+    },
+    {
+      "intent": "Get_Confirmation_If_Okay_To_Ask_Questions",
+      "examples": [
+        {
+          "text": "No"
+        },
+        {
+          "text": "Nope"
+        },
+        {
+          "text": "Yes"
+        }
+      ],
+      "description": "It is okay to ask questions to user"
+    },
+    {
+      "intent": "Get_PreExisting_Mental_Conditions",
+      "examples": [
+        {
+          "text": "No"
+        },
+        {
+          "text": "Yes"
+        }
+      ],
+      "description": "Get if user is seeing any therapist or taking any mental health medication"
+    },
+    {
+      "intent": "Get_ProblemDescription",
+      "examples": [
+        {
+          "text": "I'm anxious, nervous, lonely, stressed, sad, angry, sick, confused",
+          "mentions": [
+            {
+              "entity": "NegativeEmotions",
+              "location": [
+                4,
+                11
+              ]
+            },
+            {
+              "entity": "NegativeEmotions",
+              "location": [
+                13,
+                20
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I'm afraid",
+          "mentions": [
+            {
+              "entity": "NegativeEmotions",
+              "location": [
+                4,
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I'm feeling stessed",
+          "mentions": [
+            {
+              "entity": "NegativeEmotions",
+              "location": [
+                12,
+                19
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I'm worried about covid 19"
+        },
+        {
+          "text": "I'm feeling stressed"
+        },
+        {
+          "text": "I need help"
+        }
+      ],
+      "description": "Problem description"
+    },
+    {
+      "intent": "Get_AnythingElse_Upon_PositiveFeeling",
+      "examples": [
+        {
+          "text": "No"
+        },
+        {
+          "text": "Yes"
+        }
+      ],
+      "description": "User has positive feeling, ask for any further help"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "FeelingNow",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Happy",
+          "synonyms": [
+            "Joyful",
+            "Optimistic",
+            "Confident",
+            "Relaxed",
+            "Active",
+            "Proud"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sad",
+          "synonyms": [
+            "Depressed",
+            "Anxious",
+            "Angry",
+            "Sick",
+            "Tired",
+            "Lonely",
+            "Nervous",
+            "Afraid",
+            "Confused"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeFeeling_Travel",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NumberOfTimesFeelingNegative",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "3",
+          "synonyms": [
+            "A few times"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "2",
+          "synonyms": [
+            "Once or twice"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "4",
+          "synonyms": [
+            "Many times"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "0",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "1",
+          "synonyms": [
+            "Not at all"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeFeeling_Family",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "location",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "28262",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "28277",
+          "synonyms": []
+        },
+        {
+          "type": "patterns",
+          "value": "12345",
+          "patterns": [
+            "\\d{5}"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ReasonForNegativeFeelings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Other",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Social distancing",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Travel",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Unemployment",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Family",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Income",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeFeeling_Other",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeFeeling_Income",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "PreExisting_Mental_Conditions",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No I'm not",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes I'm",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ProblemStatement",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "I'm worried due to covid-19",
+          "synonyms": [
+            "Corona",
+            "Pandemic"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "I'm under stress",
+          "synonyms": [
+            "Anxiety"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "stressed due to isolation",
+          "synonyms": [
+            "social distancing",
+            "lockdown"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "worried due to job loss",
+          "synonyms": [
+            "unemployment",
+            "career",
+            "financial loss"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Stress_Yes_No",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeFeelingDueToPandemic",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No its not",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "That's right",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "PositiveEmotions",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Proud",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Happy",
+          "synonyms": [
+            "Joyful",
+            "Cheerful",
+            "Enjoy",
+            "Good",
+            "Excellent",
+            "Awesome"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Optimistic",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Confident",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Relaxed",
+          "synonyms": [
+            "Peaceful"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Active",
+          "synonyms": [
+            "Energetic"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Ask_More_Help",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No I'm good",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes I need help",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "ConsentToFindTherapist",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Yes, Find Therapist for me",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "No, I do not want to find Therapist",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeEmotions",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Tired",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sad",
+          "synonyms": [
+            "Depressed",
+            "Anxious"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Stressed",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Angry",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sick",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "stessed",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "nervous",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "anxious",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Confused",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Afraid",
+          "synonyms": [
+            "Scared"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Lonely",
+          "synonyms": [
+            "Isolated"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Get_AnythingElse_Upon_PositiveFeeling",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "OkayToAskQuestions",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Sure",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nope",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeFeeling_Unemployment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "NegativeFeeling_SocialDistancing",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yes",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    },
+    "from-sample": true
+  },
+  "webhooks": [
+    {
+      "url": "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?parameters&input=psychiatrist&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=ipbias&key=KEY_GOES_HERE",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Question - Get_PreExisting_Mental_Conditions_No",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay that sounds good so looks like you are not on any medication or visiting therapist. Do you have this feeling due to current pandemic? "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "That's right",
+                "value": {
+                  "input": {
+                    "text": "That's right"
+                  }
+                }
+              },
+              {
+                "label": "No its not",
+                "value": {
+                  "input": {
+                    "text": "No its not"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1594511230504",
+      "conditions": "@PreExisting_Mental_Conditions:(No I'm not)",
+      "dialog_node": "node_1_1594528209091",
+      "previous_sibling": "node_3_1594511358460"
+    },
+    {
+      "type": "standard",
+      "title": "Question - Get_PreExisting_Mental_Conditions_Yes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hmm, not to worry. You can continue to do so and in parallel I recommend you to read some good blogs, books or do a regular meditation. That will keep you occupied in self rejuvenation. I hope this is helpful to you. Are you looking for any further help?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No, I'm good",
+                "value": {
+                  "input": {
+                    "text": "No, I'm good"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1594511230504",
+      "conditions": "@PreExisting_Mental_Conditions:(Yes I'm)",
+      "dialog_node": "node_3_1594511358460"
+    },
+    {
+      "type": "standard",
+      "title": "No to Get_Confirmation_If_Okay_To_Ask_Questions",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_4_1594266740511",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@OkayToAskQuestions:Nope",
+      "dialog_node": "node_9_1594510947934",
+      "previous_sibling": "node_2_1594510551196"
+    },
+    {
+      "type": "standard",
+      "title": "Question - How many times feeling depressed in last 10 days?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "From past 10 days how many times you felt stressed, down, depressed?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Not at all",
+                "value": {
+                  "input": {
+                    "text": "1"
+                  }
+                }
+              },
+              {
+                "label": "Once or twice",
+                "value": {
+                  "input": {
+                    "text": "2"
+                  }
+                }
+              },
+              {
+                "label": "A few times",
+                "value": {
+                  "input": {
+                    "text": "3"
+                  }
+                }
+              },
+              {
+                "label": "Many times",
+                "value": {
+                  "input": {
+                    "text": "4"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1594266740511",
+      "conditions": "@OkayToAskQuestions:Sure",
+      "dialog_node": "node_2_1594510551196"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling due to Income",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hmmm looks like you are worried due to the income issue. This is the link may be you can refer to understand more on benefits - \nhttps://www.dol.gov/general/topic/unemployment-insurance"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1595038316795",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@ReasonForNegativeFeelings:Income",
+      "dialog_node": "node_2_1595039399671",
+      "previous_sibling": "node_3_1595038777039"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling due to Unemployment",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Looks like you are worried due to the unemployment, just in case if you need to file a claim. This link will help you - \nhttps://www.dol.gov/general/topic/unemployment-insurance"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1595038316795",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@ReasonForNegativeFeelings:Unemployment",
+      "dialog_node": "node_4_1595039561263",
+      "previous_sibling": "node_5_1595039538619"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling due to SocialDistancing",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's pretty normal now. There are various ways you can get in touch with you friends and families thru facebook, whatsapp, zoom video calls. \nHere are some links you can refer for the same -\nhttps://www.theverge.com/interface/2020/3/13/21176880/covid-19-quarantine-social-distancing-isolation-loneliness-zoom-fortnite\nhttps://susquehannastyle.com/covid-19/5-ways-to-stay-connected-during-social-distancing/"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1595038316795",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@ReasonForNegativeFeelings:(Social distancing)",
+      "dialog_node": "node_1_1595039497198",
+      "previous_sibling": "node_1_1595039454737"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling due to Travel",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hmm.. looks like you are worried because of travel ban. Due to the current situation it is normal but soon should be back."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1595038316795",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@ReasonForNegativeFeelings:Travel",
+      "dialog_node": "node_5_1595039538619",
+      "previous_sibling": "node_1_1595039497198"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling due to Other",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_1_1595038316795",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@ReasonForNegativeFeelings:Other",
+      "dialog_node": "node_1_1595039454737",
+      "previous_sibling": "node_2_1595039399671"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling due to Family",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hmm sounds like you are worried due to family. isn't it?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1595038316795",
+      "conditions": "@ReasonForNegativeFeelings:Family",
+      "dialog_node": "node_3_1595038777039"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Looks like there is a problem getting therapist for your location"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1595027357833",
+      "conditions": "anything_else",
+      "dialog_node": "response_8_1595117010324",
+      "previous_sibling": "response_6_1595118584033"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "<br> Here I find the nearest therapist to your location  - <br><? $webhook_result_1.candidates[0].name ?> <? $webhook_result_1.candidates[0].formatted_address ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1595027357833",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_6_1595118584033"
+    },
+    {
+      "type": "standard",
+      "title": "NegativeFeeling_Family_No",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "okay, so what else brought you here?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1595038777039",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1595038316795"
+      },
+      "conditions": "@NegativeFeeling_Family:No",
+      "dialog_node": "node_2_1595039245613",
+      "previous_sibling": "node_7_1595039082688"
+    },
+    {
+      "type": "standard",
+      "title": "NegativeFeeling_Family_Yes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hmm.. I can understand. I recommend you to spend time with family, talk to your friends thru video call, chat that way you will feel relaxed. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1595038777039",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@NegativeFeeling_Family:Yes",
+      "dialog_node": "node_7_1595039082688"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling Due to Pandemic - No",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hmm, so what else brought you here?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Unemployment",
+                "value": {
+                  "input": {
+                    "text": "Unemployment"
+                  }
+                }
+              },
+              {
+                "label": "Social distancing",
+                "value": {
+                  "input": {
+                    "text": "Social distancing"
+                  }
+                }
+              },
+              {
+                "label": "Family",
+                "value": {
+                  "input": {
+                    "text": "Family"
+                  }
+                }
+              },
+              {
+                "label": "Travel",
+                "value": {
+                  "input": {
+                    "text": "Travel"
+                  }
+                }
+              },
+              {
+                "label": "Income",
+                "value": {
+                  "input": {
+                    "text": "Income"
+                  }
+                }
+              },
+              {
+                "label": "Other",
+                "value": {
+                  "input": {
+                    "text": "Other"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1594528209091",
+      "conditions": "@NegativeFeelingDueToPandemic:(No its not)",
+      "dialog_node": "node_1_1595038316795",
+      "previous_sibling": "node_8_1595027128939"
+    },
+    {
+      "type": "standard",
+      "title": "Negative Feeling Due to Pandemic - Yes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright so that's normal due to the current situation. Please be relaxed and talk to you family, friends and if stress exceeds I can help to find some near by therapist. Do you want to go ahead?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Yes, Find Therapist for me",
+                "value": {
+                  "input": {
+                    "text": "Yes, Find Therapist for me"
+                  }
+                }
+              },
+              {
+                "label": "No, I do not want to find Therapist",
+                "value": {
+                  "input": {
+                    "text": "No, I do not want to find Therapist"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1594528209091",
+      "conditions": "@NegativeFeelingDueToPandemic:(That's right)",
+      "dialog_node": "node_8_1595027128939"
+    },
+    {
+      "type": "standard",
+      "title": "Ask_More_Help_Yes",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_3_1594511358460",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1594511545098"
+      },
+      "conditions": "@Ask_More_Help:(Yes I need help)",
+      "dialog_node": "node_5_1595128921010"
+    },
+    {
+      "type": "standard",
+      "title": "Question - Get_HowAreYouFeeling",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "How are you feeling now?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Positive",
+            "options": [
+              {
+                "label": "Happy",
+                "value": {
+                  "input": {
+                    "text": "Happy"
+                  }
+                }
+              },
+              {
+                "label": "Joyful",
+                "value": {
+                  "input": {
+                    "text": "Joyful"
+                  }
+                }
+              },
+              {
+                "label": "Optimistic",
+                "value": {
+                  "input": {
+                    "text": "Optimistic"
+                  }
+                }
+              },
+              {
+                "label": "Confident",
+                "value": {
+                  "input": {
+                    "text": "Confident"
+                  }
+                }
+              },
+              {
+                "label": "Relaxed",
+                "value": {
+                  "input": {
+                    "text": "Relaxed"
+                  }
+                }
+              },
+              {
+                "label": "Active",
+                "value": {
+                  "input": {
+                    "text": "Active"
+                  }
+                }
+              },
+              {
+                "label": "Proud",
+                "value": {
+                  "input": {
+                    "text": "Proud"
+                  }
+                }
+              }
+            ],
+            "description": "Positive ",
+            "response_type": "option"
+          },
+          {
+            "title": "Negative",
+            "options": [
+              {
+                "label": "Sad",
+                "value": {
+                  "input": {
+                    "text": "Sad"
+                  }
+                }
+              },
+              {
+                "label": "Depressed",
+                "value": {
+                  "input": {
+                    "text": "Depressed"
+                  }
+                }
+              },
+              {
+                "label": "Anxious",
+                "value": {
+                  "input": {
+                    "text": "Anxious"
+                  }
+                }
+              },
+              {
+                "label": "Angry",
+                "value": {
+                  "input": {
+                    "text": "Angry"
+                  }
+                }
+              },
+              {
+                "label": "Sick",
+                "value": {
+                  "input": {
+                    "text": "Sick"
+                  }
+                }
+              },
+              {
+                "label": "Lonely",
+                "value": {
+                  "input": {
+                    "text": "Lonely"
+                  }
+                }
+              },
+              {
+                "label": "Afraid",
+                "value": {
+                  "input": {
+                    "text": "Afraid"
+                  }
+                }
+              }
+            ],
+            "description": "Negative",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1594510551196",
+      "conditions": "@NumberOfTimesFeelingNegative != \"1\"",
+      "dialog_node": "node_4_1594511545098"
+    },
+    {
+      "type": "standard",
+      "title": "Question - Get_Confirmation_If_Okay_To_Ask_Questions",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "hmm..that's normal to have due to the current situation. Can I ask you a few questions?"
+              },
+              {
+                "text": "I agree it's fair to have worrisome these days due to the current pandemic. I recommend you to get more info on COVID-19 from CDC website. I'm sure it will help you out -  https://www.cdc.gov/coronavirus/2019-ncov/index.html\nWell, Can I ask you some questions?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Sure",
+                "value": {
+                  "input": {
+                    "text": "Sure"
+                  }
+                }
+              },
+              {
+                "label": "Nope",
+                "value": {
+                  "input": {
+                    "text": "Nope"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_6_1594264174761",
+      "conditions": "@NegativeEmotions",
+      "dialog_node": "node_4_1594266740511"
+    },
+    {
+      "type": "standard",
+      "title": "ConsentToFindTherapist_No",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_8_1595027128939",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@ConsentToFindTherapist:(No, I do not want to find Therapist)",
+      "dialog_node": "node_1_1595027447764",
+      "previous_sibling": "node_2_1595027357833"
+    },
+    {
+      "type": "standard",
+      "title": "ConsentToFindTherapist_Yes",
+      "parent": "node_8_1595027128939",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "": ""
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@ConsentToFindTherapist:(Yes, Find Therapist for me)",
+      "dialog_node": "node_2_1595027357833"
+    },
+    {
+      "type": "standard",
+      "title": "Ask for more help - yes",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1595183736977",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1594527834061"
+      },
+      "conditions": "@Ask_More_Help:(Yes I need help)",
+      "dialog_node": "node_10_1595183954958",
+      "previous_sibling": "node_4_1595183952185"
+    },
+    {
+      "type": "standard",
+      "title": "Ask for more help - No",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_5_1595183736977",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1594265498464"
+      },
+      "conditions": "@Ask_More_Help:(No I'm good)",
+      "dialog_node": "node_4_1595183952185"
+    },
+    {
+      "type": "standard",
+      "title": "Get_ProblemDescription",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay. Please describe your problem."
+              },
+              {
+                "text": "Got it. Please elaborate more on what's the exact issue"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "parent": "node_2_1592712541364",
+      "conditions": "@Stress_Yes_No:Yes",
+      "dialog_node": "node_6_1594264174761",
+      "previous_sibling": "node_8_1594264990948"
+    },
+    {
+      "type": "standard",
+      "title": "No to Stress",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_2_1592712541364",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_6_1594264174761"
+      },
+      "conditions": "@Stress_Yes_No:No",
+      "dialog_node": "node_8_1594264990948"
+    },
+    {
+      "type": "standard",
+      "title": "Question - PositiveFeeling - Ask if any further help needed?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's awesome, let me know if you need any further help?"
+              },
+              {
+                "text": "I'm glad to know that. Is there anything else I can assist you today?"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1594511545098",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_5_1595183736977"
+      },
+      "conditions": "@PositiveEmotions",
+      "dialog_node": "node_1_1594527478958",
+      "previous_sibling": "node_1_1594511230504"
+    },
+    {
+      "type": "standard",
+      "title": "Question - Get_PreExisting_Mental_Conditions",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Are you visiting any therapist?"
+              },
+              {
+                "text": "Are you taking on any mental health medication?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Yes I'm",
+                "value": {
+                  "input": {
+                    "text": "Yes I'm"
+                  }
+                }
+              },
+              {
+                "label": "No I'm not",
+                "value": {
+                  "input": {
+                    "text": "No I'm not"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1594511545098",
+      "conditions": "@NegativeEmotions",
+      "dialog_node": "node_1_1594511230504"
+    },
+    {
+      "type": "standard",
+      "title": "Get_AnythingElse_Upon_PositiveFeeling _Yes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okay, so let me know how may I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1594266740511"
+      },
+      "conditions": "@Get_AnythingElse_Upon_PositiveFeeling:Yes",
+      "dialog_node": "node_1_1594527834061",
+      "previous_sibling": "node_6_1594527564701"
+    },
+    {
+      "type": "standard",
+      "title": "Question - Get_Ans_To_Stress_Yes_No",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you contacting Mitr. Well, are you feeling stressed due to the current situation?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#Get_User_Greetings",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1592712541364",
+      "previous_sibling": "node_5_1595183736977"
+    },
+    {
+      "type": "standard",
+      "title": "Thank you",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for using Mitr.. it was nice talking to you."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Get_All_Set",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1594265498464",
+      "previous_sibling": "Anything else"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get you."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_1_1594527834061",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "Get_AnythingElse_Upon_PositiveFeeling_No",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That's great. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_2_1594265498464"
+      },
+      "conditions": "@Get_AnythingElse_Upon_PositiveFeeling:No",
+      "dialog_node": "node_6_1594527564701",
+      "previous_sibling": "node_2_1592712541364"
+    },
+    {
+      "type": "standard",
+      "title": "Default node - Ask if any further help needed?",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Is there anything else I can assist you today?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Please choose",
+            "options": [
+              {
+                "label": " Yes I need help",
+                "value": {
+                  "input": {
+                    "text": " Yes I need help"
+                  }
+                }
+              },
+              {
+                "label": "No I'm good",
+                "value": {
+                  "input": {
+                    "text": "No I'm good"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "dialog_node": "node_5_1595183736977",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, I' Mitr - your friendly bot to help you out in the current pandemic situation"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
