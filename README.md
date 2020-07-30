@@ -1,2 +1,2 @@
 # chatbot
-Chatbot for the mental health issue
+Chatbot for the emotional health issue
