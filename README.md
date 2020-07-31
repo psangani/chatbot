@@ -14,11 +14,12 @@
 
 # Our Solution - 
 
-- ‘Mitr’ (companion in Hindi), a Chat-bot will be a smart tool for the users who can interact with it on Web or install on smartphones. 
-- The bot will ask few basic questions to understand users mental well-being, emotions and gets the GPS location upon users consent. Based on these questions, Mitr will analyze and recommend tailored self-care, positive activities.
-- Application leverages IBM Watson Assistant API for NLP, machine learning to make smart decisions. It also uses Google Map API to get user's location after user gives consent.\
-- For the decision-making intents, entities, dialogs and dialog flow have been created. Application seeks users location and for the therapist name/address, app calls Google map API and integrates with Webhooks.
-- Currently the application is integrated with Slack. 
+-	‘Mitr (companion in Hindi), a Chat-bot will be a smart tool for the users who can interact via Web or Mobile app.
+-	The Chat-bot will ask few basic questions to understand users’ mental well-being, emotions and gets the GPS location upon users’ consent. Based on these questions, Mitr will analyze and recommend tailored self-care, positive activities.
+-	Application leverages IBM Watson Assistant for NLP, machine learning to make smart decisions.
+-	For the decision-making intents, entities, dialogs and dialog flow have been created. Application seeks users’ location and for the therapist name/address, app calls Google maps API and integrates in IBM Watson Assistant via webhooks.
+-	Application has been integrated with Slack for the better user experience as part of prototype.
+
 
 ## Architecture Diagram - 
 
@@ -31,11 +32,15 @@ https://youtu.be/qakCRVBP-TA
 
 # Planned Improvements - 
 
-- The bot can be developed as a standalone Android/iOS application or a website that anyone can use. 
-- This will help the bot to serve more users since the users would not need to install slack and integrate the bot onto the slack channel to start interacting with the bot. 
-- The website or the app can have this bot as a first step to gauge the mental health of the user and then based on that the app can show relevant information to the user. 
-- The information can be anything ranging from motivational videos, books to engaging and interesting hobbies that the user can pursue to reduce stress.
-- The app can also have therapist and 24x7 support persons to talk to the users.
+- The bot can be developed as a mobile app or can be integrated with any website. 
+- With sentiment analysis (by accessing users’ social media activities upon consent), bot can determine users’ strength and weaknesses and provide a tailored solution.
+- The website or the app can have this bot as a first step to gauge the mental health of the user and then based on that the app can show relevant information to the user. The information can be anything ranging from motivational videos, books to engaging and interesting hobbies that the user can pursue to reduce stress.
+- The bot can be a medium to connect patients with the healthcare workers to support remotely and instantly. 
+- Also the bot can be enhanced to get up to date info from the local authorities on the pandemic so that people are aware of what is happening near by. For now bot provides CDC (Centers for Disease Control and Prevention) and DOL (Dept of Labor) information but can be enhanced to connect people with the financial services, banking for any support. It can be a one stop shop for all users’ needs. 
+
+# Business Model -
+
+In a nutshell chatbot growth is skyrocketing and with pandemic situation it is necessity for any business to better support remotely, instantly, and enhanced customer service. Covid-19 specific bot can be a true companion for patients and healthcare workers. With the proposed improvements, the app can be scaled to serve many users. Once user engagement with the app increases, it can self-improvise and become more matured. The app can have a marketplace for users having products that can reduce stress amongst the users and can promote mental wellbeing. The app can have a membership program for instant and priority support as well.
 
 # License - 
 GPL-3.0 License 
