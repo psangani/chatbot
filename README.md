@@ -20,6 +20,11 @@
 - For the decision-making intents, entities, dialogs and dialog flow have been created. Application seeks users location and for the therapist name/address, app calls Google map API and integrates with Webhooks.
 - Currently the application is integrated with Slack. 
 
+## Architecture Diagram - 
+
+![alt text](https://github.com/psangani/chatbot/blob/master/architecture%20diagram.PNG)
+
+
 # Planned Improvements - 
 
 - The bot can be developed as a standalone Android/iOS application or a website that anyone can use. 
@@ -29,4 +34,4 @@
 - The app can also have therapist and 24x7 support persons to talk to the users.
 
 # License - 
-MIT 
+GPL-3.0 License 
